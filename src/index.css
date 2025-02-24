@@ -3,26 +3,29 @@
   margin: 0;
   box-sizing: border-box;
 }
-.navbar {
-  background-color: #1f2937;
+nav, footer{
+  background-color: #e2eaf7;
   padding: 40px;
 }
 
-.nav-list {
+ul {
   display: flex;
-  gap: 5px;
+  justify-content: center;
+  gap: 20px;
   list-style: none;
   color: white;
 }
 
-.nav-link {
+a, footer li {
   text-decoration: none;
   color: white;
   transition: color 0.3s;
   background-color: #9ca3af;
   padding: 20px 40px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
-.nav-link:hover {
-  background-color: grey;
+.active{
+  background-color: #6780ac;
 }
