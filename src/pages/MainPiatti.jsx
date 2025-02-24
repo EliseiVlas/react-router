@@ -1,4 +1,4 @@
-export default function ListaPost() {
+export default function MainPiatti() {
 
       
     return (
