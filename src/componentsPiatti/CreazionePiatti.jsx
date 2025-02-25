@@ -1,5 +1,8 @@
 import { useState } from 'react';
+// import navigate per navigazione programmatica dopo invio form
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
 // componente
 export default function CreazionePiatti() {
     const initialnuovoArticolo = {
@@ -8,9 +11,6 @@ export default function CreazionePiatti() {
         image: "",
         tags: [],
     };
-
-    // stato dei piatti
-    const [articoliWeb, setArticoliWeb] = useState([]);
 
     // stato del imput del piatto
     const [nuovoArticolo, setNuovoArticolo] = useState(initialnuovoArticolo);
@@ -26,14 +26,18 @@ export default function CreazionePiatti() {
            [e.target.name]: value,
         }));
    }
+    // utilizzo del navigate
+    const navigate = useNavigate();
 
        // funzione di gestione dell'invio dell'intero form (tuue le info dei vari campi)
     function handleSubmit(e) {
+        e.preventDefault();
         // chiamata verso la API in post con invio dati nuovo piatto
         axios.post("http://localhost:3000/piatti/", nuovoArticolo)
             .then(res => {
                 // uso la risposta dell'API per creare il nuovo array menu
-                setArticoliWeb((currentArticoliWeb) => [...currentArticoliWeb, res.data])
+                // setArticoliWeb((currentArticoliWeb) => [...currentArticoliWeb, res.data])
+                navigate("/piatti")
             }
             )
             .catch(err => console.log(err))
