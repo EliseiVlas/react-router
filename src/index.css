@@ -3,6 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 nav, footer{
   background-color: #e2eaf7;
   display: flex;
@@ -38,6 +44,9 @@ a:hover, footer li:hover{
   padding: 25px 40px;
 
 }
+header, footer{
+  width: 100%;
+}
 
 /* modifiche file delle pizze */
 input, textarea, label{
@@ -46,12 +55,22 @@ input, textarea, label{
   border: 3px solid black;
 }
 .articoloItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 border: 3px solid black;
 margin-bottom: 20px;
 padding: 0px 0px 20px 20px;
 border-radius: 20px;
 margin-top: 20px;
-width: 50%;
+width: 70%;
+}
+.articoloItem a{
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 form{
   border: 3px solid black;
@@ -65,11 +84,39 @@ button{
   color: white;
   margin-top: 5px;
   border-radius: 10px;
+  margin-top: 15px;
 }
 img{
-  width: 50%;
+  width: 70%;
+  margin-bottom: 20px;
+  border: 5px solid black;
+  border-radius: 10px;
 }
 main{
+
   height: 70vh;
   width: 100%;
+}
+.articoloItem p{
+margin-bottom: 20px;
+}
+
+/* modifica  caroselo*/
+.caroselo{
+  background-color: white;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 10px 0px;
+}
+
+.caroselo a{
+  text-decoration: none;
+  color: black;
+  background-color: azure;
+  padding: 10px 25px;
+  border: 2px solid black;
+  border-radius: 10px;
 }

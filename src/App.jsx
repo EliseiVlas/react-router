@@ -8,7 +8,9 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import ChiSiamo from "./pages/ChiSiamo";
 import ListaPost from "./pages/ListaPost";
-import MainPiatti from "./componentsPiatti/MainPiatti";
+import ListaPiatti from "./pages/PaginaListaPiatti";
+import DetaglioPiattoSingolo from "./pages/PaginaDetaglioSingolo";
+import CreazioneNuoviPiatti from "./pages/PaginaCreazionePiatti";
 function App() {
 
   return (
@@ -18,7 +20,11 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/lista" element={<ListaPost />} />
-          <Route path="/piatti" element={<MainPiatti />} />
+          <Route path="/piatti">
+            <Route index element={<ListaPiatti />} />
+            <Route path="create" element={<CreazioneNuoviPiatti />} />
+            <Route path=":id" element={<DetaglioPiattoSingolo />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter >
