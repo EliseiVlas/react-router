@@ -11,6 +11,8 @@ import ListaPost from "./pages/ListaPost";
 import ListaPiatti from "./pages/PaginaListaPiatti";
 import DetaglioPiattoSingolo from "./pages/PaginaDetaglioSingolo";
 import CreazioneNuoviPiatti from "./pages/PaginaCreazionePiatti";
+import PaginaErrore from "./pages/PaginaErrore";
+
 function App() {
 
   return (
@@ -26,6 +28,9 @@ function App() {
             <Route path="create" element={<CreazioneNuoviPiatti />} />
             <Route path=":id" element={<DetaglioPiattoSingolo />} />
           </Route>
+          {/* rotta del 404 per rotte non previste */}
+          <Route path="*" element={<PaginaErrore />} />
+          <Route path="/piatti/0" element={<PaginaErrore />} />
         </Route>
       </Routes>
     </BrowserRouter >
