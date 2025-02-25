@@ -1,5 +1,5 @@
 // import degli elementi della libreria di gestione delle rotte
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Layout
 import DefaultLayout from "./layouts/DefaultLayout";
@@ -20,6 +20,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/lista" element={<ListaPost />} />
+          <Route path="/Ristorante" element={<Navigate to="/piatti" />} />
           <Route path="/piatti">
             <Route index element={<ListaPiatti />} />
             <Route path="create" element={<CreazioneNuoviPiatti />} />
