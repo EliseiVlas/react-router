@@ -24,14 +24,19 @@ a, footer li {
   text-decoration: none;
   color: white;
   transition: color 0.3s;
-  background-color: #9ca3af;
+  background-color: #6780ac;
   padding: 20px 40px;
   border: 2px solid black;
   border-radius: 10px;
 }
+a:hover, footer li:hover{
+  background-color: #1e3f79;
+}
 
 .active{
-  background-color: #6780ac;
+  background-color: #1e3f79;
+  padding: 25px 40px;
+
 }
 
 /* modifiche file delle pizze */

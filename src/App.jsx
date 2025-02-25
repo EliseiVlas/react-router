@@ -8,14 +8,14 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import ChiSiamo from "./pages/ChiSiamo";
 import ListaPost from "./pages/ListaPost";
-import MainPiatti from "./pages/MainPiatti";
+import MainPiatti from "./componentsPiatti/MainPiatti";
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<DefaultLayout />} >
-          <Route path="/" element={<HomePage />} />
+          <Route index element={<HomePage />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/lista" element={<ListaPost />} />
           <Route path="/piatti" element={<MainPiatti />} />
